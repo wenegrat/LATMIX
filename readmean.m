@@ -1,6 +1,10 @@
 %% Reads in statistics outputted by diablo 
-turbo=dlmread('../front/run1/mean.txt');
-turbo_th=dlmread('../front/run1/mean_th.txt');
+
+% turbo=dlmread('../front/run2/mean.txt');
+% turbo_th=dlmread('../front/run2/mean_th.txt');
+disp(path)
+turbo=dlmread([path, 'mean.txt']);
+turbo_th=dlmread([path, 'mean_th.txt']);
 
 % Set the domain size
 NY=100;
