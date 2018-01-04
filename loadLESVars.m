@@ -25,6 +25,9 @@ out.vflux_a = thw; % Along front tracer fluxes
 out.uw_a = uv; % Vertical Reynolds Stresses
 out.uv_a = uw; % Across front Reynolds stresses
 out.vw_a = wv; % Along Front Reynolds Stresses
+out.ua = ume;
+out.va = vme;
+out.wa = wme;
 
 %% Dye 1
 moviefile=dlmread([path, 'movie_x2.txt']); % buoyancy
@@ -35,6 +38,16 @@ out.dye1 = mat;
 moviefile=dlmread([path, 'movie_x3.txt']); % buoyancy
 plot_movie_xy;
 out.dye2 = mat;
+
+%% u 
+moviefile=dlmread([path, 'movie_u_x.txt']);
+plot_movie_xy;
+out.u = mat;
+
+%% v 
+moviefile=dlmread([path, 'movie_v_x.txt']);
+plot_movie_xy;
+out.v = mat;
 
 
 end
